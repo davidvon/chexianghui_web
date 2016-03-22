@@ -1,38 +1,53 @@
 <template>
-  <div>
-    <div class="center">
-      <svg style="width:60px;height:60px;" version="1.1" id="图形" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1024px" height="1024px" viewBox="0 0 1024 1024" enable-background="new 0 0 1024 1024" xml:space="preserve"><path class="svgpath" data-index="path_0" fill="#35495e" d="M512 816.64 51.2 985.6l460.8-947.2 460.8 947.2L512 816.64 512 816.64zM509.44 207.36 189.44 862.72l317.44-117.76L506.88 207.36 509.44 207.36zM509.44 207.36" /></svg>
-
-      <h1 class="vux-title" style="display:none;">
-        <span class="demo-icon" slot="icon" style="font-size:60px;color:#35495e;display: block;">&#xe637;</span>
-      </h1>
-      <p class="vux-notice">Beta. Not Production Ready(v0.1).</p>
+  <header id="header">
+        <div id="head_nav" class="head_nav">
+            <a href="javascript:;" class="fl uinfo_show"><b class="icon"></b></a>
+            <div class="nav_title_show"><div class="book_title">车享惠<b class="slide_down" style="display:none"></b></div></div>
+            <div class="user_nav_show clearfix" style="display: none;">
+                <div class="nav_list">
+                    <a href="/mobile/service" class="nav_icon_btn wash"><b></b><br>洗车美容</a>
+                    <a href="/mobile/maintain" class="nav_icon_btn maintain"><b></b><br>维修保养</a>
+                    <a href="/mobile/groupon" class="nav_icon_btn tuan"><b></b><br>新车团购</a>
+                    <a href="/mobile/carused" class="nav_icon_btn old"><b></b><br>惠心二手车</a>
+                    <a href="http://wx.wsq.qq.com/261540592" class="nav_icon_btn community"><b></b><br>爱车社区</a>
+                    <a href="/mobile/personal" class="nav_icon_btn personal"><b></b><br>个人中心</a>
+                    
+                </div>
+            </div>
+        </div>
+  </header>
+  <div id="wall_welcome" class="page_view wall_wrapper">
+    <div class="wall_scroller">
+      <div id="slider" class="slider home-hd">
+          <div id="slider-bd" style="overflow: hidden;">
+              <div class="slider-cont" id="slider-cont">
+              <ul class="slider-list">
+              <li style=""> <a href=""><img height="400px" width="200px" src="/mobile/static/img/ad_tuan.png"></a></li>
+              <li style=""> <a href=""><img height="400px" width="200px" src="/mobile/static/img/ad_1.jpg?v1"></a></li>
+              <li style=""> <a href=""><img height="400px" width="200px" src="/mobile/static/img/ad_2.png?v1"></a></li>
+              </ul>
+              </div>
+          </div>
+          <ul class="slider-indicator">
+            <li class="active">0</li>
+            <li class="">1</li>
+            <li class="">2</li>
+          </ul>
       </div>
-      <group>
-        <cell title="Demo" link="demo" >
-          <span class="demo-icon" slot="icon" style="color:#F70968">aaa</span>
-        </cell>
-      </group>
-      <group>
-        <cell title="Milestone" :value="'v' + version" link="project/milestone">
-          <span class="demo-icon" slot="icon">&#xe62d;</span>
-        </cell>
-        <cell title="HISTORY.md" value="-">
-          <span class="demo-icon" slot="icon" style="color:#666;">&#xe63a;</span>
-        </cell>
-        <cell title="Thanks" link="project/thanks">
-          <span class="demo-icon" slot="icon" style="color:#666;">&#xe62e;</span>
-        </cell>
-      </group>
-      <group>
-        <cell title="Fork me" link="http://github.com/airyland/vux">
-          <span class="demo-icon" slot="icon" style="color:#35495e;">&#xe62f;</span>
-        </cell>
-        <cell title="Buy me a coffee" link="project/donate">
-          <span class="demo-icon" slot="icon" style="color:red;">&#xe630;</span>
-        </cell>
-      </group>
     </div>
+    <section>
+    <ul class="list_ul">
+    <li><a class="cate_icon wash_icon" href="/mobile/service"><figure><b></b><figcaption>洗车美容</figcaption></figure></a></li>
+    <li><a class="cate_icon daily_icon" href="/mobile/maintain"><figure><b></b><figcaption>维修保养</figcaption></figure></a></li>
+    <li><a class="cate_icon groupon_icon" href="/mobile/groupon"><figure><b></b><figcaption>新车团购</figcaption></figure></a></li>
+    <li><a class="cate_icon used_icon" href="/mobile/carused"><figure><b></b><figcaption>惠心二手车</figcaption></figure></a></li>
+    <li><a class="cate_icon community_icon" href="http://wx.wsq.qq.com/261540592"><figure><b></b><figcaption>爱车社区</figcaption></figure></a></li>
+    <li><a class="cate_icon person_icon" href="/mobile/personal"><figure><b></b><figcaption>个人中心</figcaption></figure></a></li>
+    
+    </ul>
+    </section>
+  </div>
+
 </template>
 
 <script>
@@ -52,7 +67,7 @@ export default {
 </script>
 
 <style>
-@import './demos/style.css';
+@import './app/style.css';
 .center {
   margin-top: 15px;
   text-align: center;

@@ -142,9 +142,6 @@
       <cell title="微信设置页面" link="demo/wechat">
         <span class="demo-icon" slot="icon">&#xe600;</span>
       </cell>
-      <cell title="小蚁摄像设置" link="demo/yi">
-        <span class="demo-icon" slot="icon">&#xe622;</span>
-      </cell>
     </group>
 
     <group title="Todo" title-color="#04be02" style="display: none;">
