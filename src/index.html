@@ -19,7 +19,9 @@
     <script type="text/javascript" src="./static/vendors/fastclick.1.0.6.min.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <router-view ></router-view>
+    </div>
     {% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
     <script src=".{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}"></script>{% } %}
     <script type="text/javascript">
