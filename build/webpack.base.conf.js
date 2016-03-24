@@ -20,35 +20,15 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.vue$/,
-        loader: 'vue'
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel!eslint',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.json$/,
-        loader: 'json'
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'url',
-        query: {
-          limit: 10000,
-          name: '[name].[ext]?[hash:7]'
-        }
-      }
+      {test: /\.vue$/, loader: 'vue'},
+      {test: /\.js$/, loader: 'babel', exclude: /node_modules/},
+      {test: /\.json$/, loader: 'json'},
+      {test: /\.(png|jpg|gif|svg)$/, loader: 'url', query: { limit: 10000, name: '[name].[ext]?[hash:7]'}}
     ]
   },
   vue: {
     loaders: {
-      js: 'babel!eslint'
+      js: 'babel'
     }
-  },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
   }
 }
