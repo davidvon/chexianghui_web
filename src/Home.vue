@@ -6,22 +6,22 @@
     <section>
       <ul class="list_ul">
         <li>
-          <a class="cate_icon wash_icon" href="/mobile/service"><figure><b></b><figcaption>洗车美容</figcaption></figure></a>
+          <a class="cate_icon wash_icon" href="/service"><figure><b></b><figcaption>洗车美容</figcaption></figure></a>
         </li>
         <li>
-          <a class="cate_icon daily_icon" href="/mobile/maintain"><figure><b></b><figcaption>维修保养</figcaption></figure></a>
+          <a class="cate_icon daily_icon" href="/maintain"><figure><b></b><figcaption>维修保养</figcaption></figure></a>
         </li>
         <li>
-          <a class="cate_icon groupon_icon" href="/mobile/groupon"><figure><b></b><figcaption>新车团购</figcaption></figure></a>
+          <a class="cate_icon groupon_icon" href="/groupon"><figure><b></b><figcaption>新车团购</figcaption></figure></a>
         </li>
         <li>
-          <a class="cate_icon used_icon" href="/mobile/carused"><figure><b></b><figcaption>惠心二手车</figcaption></figure></a>
+          <a class="cate_icon used_icon" href="/carused"><figure><b></b><figcaption>惠心二手车</figcaption></figure></a>
         </li>
         <li>
           <a class="cate_icon community_icon" href="http://wx.wsq.qq.com/261540592"><figure><b></b><figcaption>爱车社区</figcaption></figure></a>
         </li>
         <li>
-          <a class="cate_icon person_icon" href="/mobile/personal"><figure><b></b><figcaption>个人中心</figcaption></figure></a>
+          <a class="cate_icon person_icon" href="/personal"><figure><b></b><figcaption>个人中心</figcaption></figure></a>
         </li>
       </ul>
     </section>

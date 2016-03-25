@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App'
-
+import Service from './Service'
 import Wechat from './Wechat'
 import Home from './Home'
 import Icon from './app/Icon'
@@ -62,8 +62,8 @@ router.map({
   '/': {
     component: Home
   },
-  '/demo/wechat': {
-    component: Wechat
+  '/service': {
+    component: Service
   },
   '/component/icon': {
     component: Icon
