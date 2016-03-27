@@ -53,21 +53,6 @@ ul.ui.list,ol.ui.list,.ui.list{list-style-type:none;padding:0}
 .icon_sub, .icon_add, .icon_auto, .icon_edit, .icon_del, .icon_del, .icon_ok {display: inline-block;content: '';vertical-align: middle;background-image: url(/mobile/static/img/sprite_icon.png);background-repeat: no-repeat;background-size: 120px auto;}
 .icon_auto {width: 17px;height: 17px;background-position: -102px -132px;}
 .no_content {position: absolute;left: 50%;top: 50%;width: 127px;height: 127px;background: transparent url(/mobile/static/img/bg_empty.png) 0 0 no-repeat;background-size: 127px auto;-webkit-transform: translateX(-50%) translateY(-50%);}
-.nav_cate_wrap{position:relative;z-index:8;top:0;text-align:center;background:#fafafa;display:none;box-shadow:0 3px 10px #535050}
-/*.nav_cate_wrap:after{position:absolute;bottom:0;left:0;display:block;content:'';width:100%;height:10px;background:-webkit-linear-gradient(rgba(255,255,255,0) 0,rgba(255,255,255,1) 80%)}*/
-.nav_cate_wrap .nav_title{display:block;height:40px;line-height:40px;margin:0 8px;font-size:17px;color:#5e5e5e;}
-.nav_cate_wrap .cate_title{padding:8px 10px;display:block}
-.nav_cate_wrap .cate_tagname{color:#5e5e5e;font-size:16px;margin:2.5px 7.5px 0}
-.nav_cate_wrap .cate_title .icon{width:26px;height:26.5px;display:inline-block;background:url(../img/cate_tag_show.png) no-repeat;background-size:100px auto}
-.nav_cate_wrap .cate_shopping .icon{background-position:0 -60px}
-.nav_cate_wrap .cate_clothing .icon{background-position:0 0}
-.nav_cate_wrap .cate_shoes .icon{background-position:-30px 0}
-.nav_cate_wrap .cate_bags .icon{background-position:-60px 0}
-.nav_cate_wrap .cate_accessories .icon{background-position:0 -30px}
-.nav_cate_wrap .cate_home .icon{background-position:-30px -30px}
-.nav_cate_wrap .cate_beauties .icon{background-position:-60px -30px}
-.nav_cate_wrap .cate_title .slide{border:1px solid #5e5e5e;border-left:0;border-top:0;display:inline-block;width:3px;height:3px;-webkit-transform:rotate(45deg);margin-top:10px}
-.nav_cate_wrap .cate_title.active .slide{-webkit-transform:rotate(-135deg);top:7px}
 .cate_list_item{text-align:left}
 .cate_list_show{background:#fff;z-index:99}
 .cate_list{border-top:1px solid #dbdbdb;border-left:0;border-right:0;box-shadow:inset 0 1.5px 1.5px #e5e5e5;display:none}

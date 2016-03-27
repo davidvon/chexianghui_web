@@ -1,28 +1,53 @@
 <template>
-    <header id="header">
-        <div id="head_nav" class="head_nav">
-            <div @click="openMenu" class="fl uinfo_show" :class="{'cancel_btn':showMenu}"><b class="icon"></b></div>
-            <div class="nav_title_show"><div class="book_title">车享惠<b class="slide_down"></b></div></div>
-            <div class="user_nav_show clearfix" v-show="showMenu">
-                <div class="nav_list">
-                    <a href="/service" class="nav_icon_btn wash"><b></b><br>洗车美容</a>
-                    <a href="/maintain" class="nav_icon_btn maintain"><b></b><br>维修保养</a>
-                    <a href="/groupon" class="nav_icon_btn tuan"><b></b><br>新车团购</a>
-                    <a href="/carused" class="nav_icon_btn old"><b></b><br>惠心二手车</a>
-                    <a href="http://wx.wsq.qq.com/261540592" class="nav_icon_btn community"><b></b><br>爱车社区</a>
-                    <a href="/personal" class="nav_icon_btn personal"><b></b><br>个人中心</a>
-                    
-                </div>
+<header id="header">
+    <div id="head_nav" class="head_nav">
+        <div @click="openMenu" class="fl uinfo_show" :class="{'cancel_btn':showMenu}"><b class="icon"></b></div>
+        <div class="nav_title_show"><div @click="openCategory" class="book_title">车享惠<b class="slide_down"></b></div></div>
+        <div class="user_nav_show clearfix" v-show="showMenu">
+            <div class="nav_list">
+                <a href="/service" class="nav_icon_btn wash"><b></b><br>洗车美容</a>
+                <a href="/maintain" class="nav_icon_btn maintain"><b></b><br>维修保养</a>
+                <a href="/groupon" class="nav_icon_btn tuan"><b></b><br>新车团购</a>
+                <a href="/carused" class="nav_icon_btn old"><b></b><br>惠心二手车</a>
+                <a href="http://wx.wsq.qq.com/261540592" class="nav_icon_btn community"><b></b><br>爱车社区</a>
+                <a href="/personal" class="nav_icon_btn personal"><b></b><br>个人中心</a>
+                
             </div>
         </div>
-    </header>
+    </div>
+</header>
+<div id="cate_tab" class="cate_tab">
+    <div class="nav_cate_wrap" v-show="showCategory">
+        <div class="cate_list_show" id="cate_list">
+            <ul class="cate_list clearfix" style="display:block;">
+                <li class="sec_cate" name="精致洗车"> <a href="/mobile/service/1"><span><img src="http://chexianghui-srv.qiniudn.com/service_item.jpg" alt="">精致洗车</span></a></li>
+                
+                <li class="sec_cate" name="豪华洗车"> <a href="/mobile/service/2"><span><img src="http://chexianghui-srv.qiniudn.com/service_item.jpg" alt="">豪华洗车</span></a></li>
+                
+                <li class="sec_cate" name="车身打蜡"> <a href="/mobile/service/3"><span><img src="http://chexianghui-srv.qiniudn.com/service_item.jpg" alt="">车身打蜡</span></a></li>
+                
+                <li class="sec_cate" name="无机镀晶"> <a href="/mobile/service/4"><span><img src="http://chexianghui-srv.qiniudn.com/service_item.jpg" alt="">无机镀晶</span></a></li>
+                
+                <li class="sec_cate" name="封釉"> <a href="/mobile/service/5"><span><img src="http://chexianghui-srv.qiniudn.com/service_item.jpg" alt="">封釉</span></a></li>
+                
+                <li class="sec_cate" name="内饰洗护"> <a href="/mobile/service/9"><span><img src="http://chexianghui-srv.qiniudn.com/service_item.jpg" alt="">内饰洗护</span></a></li>
+                
+                <li class="sec_cate" name="消毒去味"> <a href="/mobile/service/10"><span><img src="http://chexianghui-srv.qiniudn.com/service_item.jpg" alt="">消毒去味</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>    
+<div id="mask_wrap" v-show="showMenu||showCategory"></div>
 </template>
 <script>
 export default {
-  props: ['showMenu'],
+  props: ['showMenu', 'showCategory'],
   methods: {
     openMenu () {
       this.showMenu = !this.showMenu
+    },
+    openCategory () {
+      this.showCategory = !this.showCategory
     }
   }
 }
@@ -245,6 +270,20 @@ export default {
 .nav_list .nav_icon_btn:nth-child(-n+3) {
     border-top: 0
 }
+.nav_cate_wrap{position:relative;z-index:8;top:0;text-align:center;background:#fafafa;box-shadow:0 3px 10px #535050}
+.nav_cate_wrap .nav_title{display:block;height:40px;line-height:40px;margin:0 8px;font-size:17px;color:#5e5e5e;}
+.nav_cate_wrap .cate_title{padding:8px 10px;display:block}
+.nav_cate_wrap .cate_tagname{color:#5e5e5e;font-size:16px;margin:2.5px 7.5px 0}
+.nav_cate_wrap .cate_title .icon{width:26px;height:26.5px;display:inline-block;background:url(/static/img/cate_tag_show.png) no-repeat;background-size:100px auto}
+.nav_cate_wrap .cate_shopping .icon{background-position:0 -60px}
+.nav_cate_wrap .cate_clothing .icon{background-position:0 0}
+.nav_cate_wrap .cate_shoes .icon{background-position:-30px 0}
+.nav_cate_wrap .cate_bags .icon{background-position:-60px 0}
+.nav_cate_wrap .cate_accessories .icon{background-position:0 -30px}
+.nav_cate_wrap .cate_home .icon{background-position:-30px -30px}
+.nav_cate_wrap .cate_beauties .icon{background-position:-60px -30px}
+.nav_cate_wrap .cate_title .slide{border:1px solid #5e5e5e;border-left:0;border-top:0;display:inline-block;width:3px;height:3px;-webkit-transform:rotate(45deg);margin-top:10px}
+.nav_cate_wrap .cate_title.active .slide{-webkit-transform:rotate(-135deg);top:7px}
 </style>
 
 
